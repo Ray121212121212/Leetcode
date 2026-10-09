@@ -6,10 +6,11 @@ class Solution(object):
         """
         pivot = 0
         for x in range(len(nums)):
-            leftsum = sum(nums[:x])
-            rightsum = sum(nums[x+1:])
-            if leftsum == rightsum:
+            if sum(nums[:x]) == sum(nums[x+1:]):
                 return x
+            #leftsum = sum(nums[:x])
+            #rightsum = sum(nums[x+1:])
+            #if leftsum == rightsum:   
         return -1
 
                 
